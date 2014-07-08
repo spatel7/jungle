@@ -88,11 +88,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    STATIC_PATH,
-)
-
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
@@ -107,8 +102,14 @@ TEMPLATE_LOADERS = (
 LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/login/'
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+
+# Static asset configuration
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_PATH, 'static'),
+)
