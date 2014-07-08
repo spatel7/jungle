@@ -1,0 +1,156 @@
+@font-face {
+  font-family: quicksand;
+  src: url('/Users/sahilpatel/Downloads/quicksand/Quicksand-Bold.otf');
+}
+
+@font-face {
+  font-family: nobile;
+  src: url('/Users/sahilpatel/Downloads/Nobile/Nobile-Bold.ttf');
+}
+
+html { 
+  background: url('http://ringvemedia.com/server//bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: nobile;
+}
+
+body {
+  margin: 0px;
+}
+
+#container {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#container #holder {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#container #holder #main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
+
+#container #holder #main #caption {
+  margin-bottom: 7px;
+  position: relative;
+}
+
+#bar {
+  width: 100%;
+  padding: 3px;
+  margin-top: 10px;
+}
+
+#bar #title {
+  width: 100%;
+}
+
+#bar #body {
+  width: 100%;
+}
+
+div.green {
+  background-color: rgba(17, 140, 78, 0.8);
+  color: white;
+}
+
+div.yellow {
+  background-color: rgba(255, 240, 86, 0.4);
+  color: black;
+}
+
+.tile {
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.tile:hover {
+  box-shadow: 0px 0px 5px;
+}
+
+button {
+  height: 30px;
+  width: 60px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0px 0px 3px;
+}
+
+.green {
+  background-color: #118C4E;
+  color: white;
+}
+
+.yellow {
+  background-color: #FFF056;
+  color: black;
+}
+
+.blue {
+  background-color: #0060FF;
+}
+
+.red {
+  background-color: #E44424;
+}
+
+h1 {
+  color: #333333;
+  font-size: 20px;
+  font-family: nobile;
+  line-height: 18px;
+  padding: 0;
+  margin-bottom: 1px;
+}
+
+a {
+  color: #08c;
+}
+
+.white {
+  color: #f0f0f0;
+}
+
+.black {
+  color: black;
+}
+
+.posts {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.new_post {
+  width: 80%;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #a0a0a0;
+  font-family: inherit;
+  font-size: inherit; 
+  background-color: #ffffcc;
+}
+.new_post:focus {
+  outline: none;
+}

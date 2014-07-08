@@ -106,7 +106,6 @@ LOGIN_URL = '/login/'
 ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
