@@ -26,11 +26,15 @@ STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 SECRET_KEY = '+wzs2o)5%u)!_98!#9p*0xiqwfi&qqyfn^t&h)(p_js799&zsx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
