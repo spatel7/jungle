@@ -8,4 +8,4 @@ pystache==0.5.4
 static==1.0.2
 wsgiref==0.1.2
 south==1.0.0
-pyjade.ext.django==2.2.0
+pyjade==2.2.0
