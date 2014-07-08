@@ -63,11 +63,11 @@ WSGI_APPLICATION = 'jungle.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'jungledb2',
-        'USER': 'sahilpatel',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': ''
+        'NAME': 'd4issu623qt2sn',
+        'USER': 'svxgvvadunache',
+        'PASSWORD': '4Y5FtKa64Ta3fDDcxxFPLJTfgX',
+        'HOST': 'ec2-23-21-185-168.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
