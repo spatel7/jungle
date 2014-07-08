@@ -1,0 +1,28 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Add a new user
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 You are in the  
+            a.black(href='/index/') Jungle
+          - if jungle
+            div#bar.green
+              div#title
+                span {{ jungle.name }}
+              div#body
+                a(href='/jungles/{{ jungle.id }}/').white Cancel
+            div#bar.yellow
+              div#title
+                span Add a new user
+              div#body
+                form(name='add_user', method='POST', action='/jungles/{{ id }}/add_user/')
+                  {% csrf_token %}
+                  Username: input(type='text', name='username', value='')
+                  input(type='submit', name='submit', value='Add this user')
+          - else
+            font(color='red') No such jungle!

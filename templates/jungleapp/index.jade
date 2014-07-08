@@ -1,0 +1,19 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Welcome to the Jungle
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+    script(type='text/javascript', src='{% static "js/global.js" %}')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 Welcome to the 
+            a.black(href='/index/') Jungle
+          div#caption
+            span(style='font-family: cursive;') Facebook's wild cousin.
+          a(href='/login/', style='text-decoration: none;')
+            button.button.yellow Login
+          a(href='/register/', style='text-decoration: none')
+            button.button.green Join

@@ -1,0 +1,22 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Add a new Jungle
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 You are in the  
+            a.black(href='/index/') Jungle
+          div#bar.green
+            div#title
+              strong Add a New Jungle
+            div#body
+              a(href='/index/').white Cancel
+          div#bar.yellow
+            form(name='new_jungle', method='POST', action='/add_jungle/')
+              {% csrf_token %}
+              {{ jungle_form.as_p }}
+              input(type='submit', name='submit', value='Go to your new Jungle!')

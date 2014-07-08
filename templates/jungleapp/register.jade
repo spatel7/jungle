@@ -1,0 +1,16 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Jungle - Register
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 Join the 
+            a.black(href='/index/') Jungle
+          form(name='register', method='POST', action='/register/')
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            button.button.green(type='submit') Join

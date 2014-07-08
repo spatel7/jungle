@@ -1,0 +1,46 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Jungle
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+    script(type='text/javascript', src='{% static "js/moment.js" %}')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 You are in the  
+            a.black(href='/index/') Jungle
+          - if jungle
+            div#bar.green
+              div#title
+                span {{ jungle.name }}
+              div#body
+                a(href='/jungles/{{ jungle.id }}/add_user/').white Add a member!
+                &nbsp;
+                a(href='/jungles/{{ jungle.id }}/write_post/').white Write a post!
+                &nbsp;
+                a(href='/jungles/{{ jungle.id }}/leave_jungle/', onclick='return confirm(\'Sure?\');').white Permanently leave jungle
+            div#bar.green
+              div#title
+                span Members
+              div#body
+                - for user in jungle.users.all
+                  span {{ user.username }}, &nbsp;
+            - if posts
+              div.posts
+                - for post in posts
+                  div#bar.yellow
+                    div#body
+                      span {{ post.displayed }} - 
+                      span 
+                        script(type='text/javascript')
+                          document.write(moment('{{ post.date.isoformat }}').fromNow());
+                      br
+                      span {{ post.content }}
+            - else
+              div#bar.yellow
+                div#body
+                  span There are no posts here!
+          - else
+            span No such jungle!

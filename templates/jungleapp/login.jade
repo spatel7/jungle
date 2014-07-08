@@ -1,0 +1,19 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Login to Jungle
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 Login to the 
+            a.black(href='/index/') Jungle
+          form(name='login', method='POST', action='/login/', style='margin-top: 10px;')
+            {% csrf_token %}
+            input(type='text', name='username', value='', placeholder='username')
+            br
+            input(type='password', name='password', value='', placeholder='**********')
+            br
+            button.button.yellow(type='submit', style='margin-top: 10px;') Login

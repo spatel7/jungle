@@ -1,0 +1,29 @@
+{% load staticfiles %}
+doctype html
+html(lang='en')
+  head
+    title Jungle Home
+    link(rel='stylesheet', href='{% static "css/global.css" %}', type='text/css')
+  body
+    div#container
+      div#holder
+        div#main
+          h1 You are in the  
+            a.black(href='/index/') Jungle
+          div#bar.green
+            div#title
+              strong.white {{ user.username }}
+            div#body
+              a(href='/add_jungle/').white New jungle
+              &nbsp;
+              a(href='/logout/').white Logout
+          div#bar.yellow
+            div#title
+              strong Your jungles
+            div#body
+              - if jungles
+                - for jungle in jungles
+                  a(href='/jungles/{{ jungle.id }}') {{ jungle.name }}
+                  br
+              - else
+                span You have no jungles!
