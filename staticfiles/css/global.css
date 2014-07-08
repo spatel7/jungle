@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: quicksand;
   src: url('/Users/sahilpatel/Downloads/quicksand/Quicksand-Bold.otf');
 }
@@ -6,7 +6,7 @@
 @font-face {
   font-family: nobile;
   src: url('/Users/sahilpatel/Downloads/Nobile/Nobile-Bold.ttf');
-}
+}*/
 
 html { 
   background: url('http://ringvemedia.com/server//bg.jpg') no-repeat center center fixed; 
